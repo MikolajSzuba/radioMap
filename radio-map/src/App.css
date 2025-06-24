@@ -1,0 +1,61 @@
+/* src/App.css */
+
+/* 1. Reset i pełna wysokość kontenerów */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Domyślne style Vite + React (opcjonalnie) */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+.logo {
+  height: 6rem;
+  padding: 1.5rem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.card {
+  padding: 2rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 2rem auto;
+  text-align: center;
+}
+button {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 4px;
+  background: #646cff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #535bf2;
+}
+.read-the-docs {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* 3. Styl dla kontenera mapy */
+.map-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
