@@ -1,3 +1,11 @@
+/* ---------- reset wysokości całego drzewa ---------- */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* ---------- bazowe zmienne i typografia (bez zmian) ---------- */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +21,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ---------- linki ---------- */
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,14 +31,21 @@ a:hover {
   color: #535bf2;
 }
 
+/* ---------- body: usuwamy centrowanie, zostawiamy reset ---------- */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  /* nie ustawiamy display:flex ani min-height:100vh –
+     wysokość bierze się z html/body/#root { height:100% } */
 }
 
+/* ---------- kontener mapy (używany w RadioMap.jsx) ---------- */
+.map-container {
+  position: absolute;
+  inset: 0;       /* top/right/bottom/left = 0 → pełne wypełnienie */
+}
+
+/* ---------- reszta oryginalnych stylów ---------- */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -54,6 +70,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* ---------- preferencje jasnego motywu ---------- */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
